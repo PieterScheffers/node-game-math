@@ -1,0 +1,23 @@
+{
+  "name": "game-math",
+  "version": "0.0.2",
+  "description": "Simple functions - trigometry, circle and time",
+  "main": "game-math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PieterScheffers/node-game-math.git"
+  },
+  "keywords": [
+    "game",
+    "math"
+  ],
+  "author": "pieterscheffers <npm@pieterscheffers.nl> (https://pieterscheffers.nl)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PieterScheffers/node-game-math/issues"
+  },
+  "homepage": "https://github.com/PieterScheffers/node-game-math#readme"
+}
