@@ -5,37 +5,37 @@ var twoPi = Math.PI * 2;
 // Circle functions
 
 var toRadians  = function(degrees) {
-	return degrees * radiansPerDegree;
+    return degrees * radiansPerDegree;
 };
 
 var toDegrees  = function(radians) {
-	return radians * degreesPerRadian;
+    return radians * degreesPerRadian;
 };
 
 // http://www.math.com/tables/geometry/circles.htm
 
 var circleDiameter = function(radius) {
-	return radius / 2;
+    return radius / 2;
 };
 
 var circleRadius = function(diameter) {
-	return diameter * 2;
+    return diameter * 2;
 };
 
 var circleCircumference = function(radius) {
-	return twoPi * radius;
+    return twoPi * radius;
 };
 
 var circleArea = function(radius) {
-	return Math.PI * square(radius);
+    return Math.PI * square(radius);
 };
 
 var circularArcLength = function(angle, radius) {
-	return angle * radius;
+    return angle * radius;
 };
 
 var circleSliceArea = function(angle, radius) {
-	return (angle / twoPi) * Math.PI * square(radius);
+    return (angle / twoPi) * Math.PI * square(radius);
 };
 
 
@@ -54,47 +54,47 @@ var circleSliceArea = function(angle, radius) {
 //          adjacent 
 
 var pythagorasHypotenuse = function(side, otherSide) {
-	return Math.SQRT2(square(side) + square(otherSide));
+    return Math.SQRT2(square(side) + square(otherSide));
 };
 
 var pythagorasSide = function(otherSide, hypotenuse) {
-	return Math.SQRT2(square(hypotenuse) - square(otherSide));
+    return Math.SQRT2(square(hypotenuse) - square(otherSide));
 };
 
 var calcAdjacentWithHypotenuse = function(angle, hypotenuse) {
-	return Math.cos(angle) * hypotenuse;
+    return Math.cos(angle) * hypotenuse;
 };
 
 var calcAdjacentWithOpposite = function(angle, opposite) {
-	return opposite / Math.tan(angle);
+    return opposite / Math.tan(angle);
 };
 
 var calcHypotenuseWithAdjacent = function(angle, adjacent) {
-	return adjacent / Math.cos(angle);
+    return adjacent / Math.cos(angle);
 };
 
 var calcHypotenuseWithOpposite = function(angle, opposite) {
-	return opposite / Math.sin(angle);
+    return opposite / Math.sin(angle);
 };
 
 var calcOppositeWithHypotenuse = function(angle, hypotenuse) {
-	return Math.sin(angle) * hypotenuse;
+    return Math.sin(angle) * hypotenuse;
 };
 
 var calcOppositeWithAdjacent = function(angle, adjacent) {
-	return Math.tan(angle) * adjacent;
+    return Math.tan(angle) * adjacent;
 };
 
 var calcAngleWithAdjacentAndOpposite = function(adjacent, opposite) {
-	return Math.atan(opposite / adjacent);
+    return Math.atan(opposite / adjacent);
 };
 
 var calcAngleWithAdjacentAndHypotenuse = function(adjacent, hypotenuse) {
-	return Math.acos(adjacent / hypotenuse);
+    return Math.acos(adjacent / hypotenuse);
 };
 
 var calcAngleWithOppositeAndHypotenuse = function(opposite, hypotenuse) {
-	return Math.asin(opposite / hypotenuse);
+    return Math.asin(opposite / hypotenuse);
 };
 
 
@@ -102,34 +102,34 @@ var calcAngleWithOppositeAndHypotenuse = function(opposite, hypotenuse) {
 // http://jorshasaur.us/faster-multiplication-and-division-in-javascript/
 
 var timesTwo = function(n) {
-	return ( n << 1 );
+    return ( n << 1 );
 };
 
 var divideTwo = function(n) {
-	return ( n >> 1 );
+    return ( n >> 1 );
 };
 
 
 // Misc function
 
 var square = function(n) {
-	return n * n;
+    return n * n;
 };
 
 
 // Time
 
 var deltaTime = function(oldTime, newTime) {
-	newTime = newTime || Date.now();
-	return newTime - oldTime;
+    newTime = newTime || Date.now();
+    return newTime - oldTime;
 };
 
 var moveMultiply = function(interval, deltaTime) {
-	return interval / deltaTime;
+    return interval / deltaTime;
 };
 
 var interval = function(fps) {
-	return 1000 / fps;
+    return 1000 / fps;
 };
 
 exports.degreesPerRadian = degreesPerRadian;
