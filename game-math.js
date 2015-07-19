@@ -1,6 +1,6 @@
 var degreesPerRadian = (180 / Math.PI);
 var radiansPerDegree = (Math.PI / 180);
-var twoPi = Math.PI * 2;
+var twoPI = Math.PI * 2;
 
 // Circle functions
 
@@ -23,7 +23,7 @@ var circleRadius = function(diameter) {
 };
 
 var circleCircumference = function(radius) {
-    return twoPi * radius;
+    return twoPI * radius;
 };
 
 var circleArea = function(radius) {
@@ -35,7 +35,7 @@ var circularArcLength = function(angle, radius) {
 };
 
 var circleSliceArea = function(angle, radius) {
-    return (angle / twoPi) * Math.PI * square(radius);
+    return (angle / twoPI) * Math.PI * square(radius);
 };
 
 
@@ -97,7 +97,6 @@ var calcAngleWithOppositeAndHypotenuse = function(opposite, hypotenuse) {
     return Math.asin(opposite / hypotenuse);
 };
 
-
 // Performance
 // http://jorshasaur.us/faster-multiplication-and-division-in-javascript/
 
@@ -134,7 +133,7 @@ var interval = function(fps) {
 
 exports.degreesPerRadian = degreesPerRadian;
 exports.radiansPerDegree = radiansPerDegree;
-exports.twoPi = twoPi;
+exports.twoPI = twoPI;
 exports.toRadians = toRadians;
 exports.toDegrees = toDegrees;
 exports.toRadians = toRadians;
