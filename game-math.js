@@ -54,11 +54,11 @@ var circleSliceArea = function(angle, radius) {
 //          adjacent 
 
 var pythagorasHypotenuse = function(side, otherSide) {
-    return Math.SQRT2(square(side) + square(otherSide));
+    return Math.sqrt(square(side) + square(otherSide));
 };
 
 var pythagorasSide = function(otherSide, hypotenuse) {
-    return Math.SQRT2(square(hypotenuse) - square(otherSide));
+    return Math.sqrt(square(hypotenuse) - square(otherSide));
 };
 
 var calcAdjacentWithHypotenuse = function(angle, hypotenuse) {
