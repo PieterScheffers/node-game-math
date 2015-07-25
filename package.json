@@ -1,6 +1,6 @@
 {
   "name": "game-math",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple functions - trigometry, circle and time",
   "main": "game-math.js",
   "scripts": {
