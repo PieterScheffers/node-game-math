@@ -4,12 +4,35 @@ var twoPI = Math.PI * 2;
 
 // Circle functions
 
+/**
+ * [toRadians description]
+ * @param  {float} degrees Angle in degrees
+ * @return {float}         Angle in radians
+ */
 var toRadians  = function(degrees) {
     return degrees * radiansPerDegree;
 };
 
-var toDegrees  = function(radians) {
+/**
+ * [toDegrees description]
+ * @param  {float} radians Angle in radians
+ * @return {float}         Angle in degrees
+ */
+var toDegrees = function(radians) {
     return radians * degreesPerRadian;
+};
+
+/**
+ * [angleInRange description]
+ * Make sure the angle is between 0 and 2PI (0 and 360 degrees)
+ * 
+ * @param  {float} angle     Angle in radians
+ * @return {float}           Angle between 0 and 2PI
+ */
+var angleInRange = function(angle) {
+    angle %= twoPI;
+    if( angle < 0 ) angle += twoPI;
+    return angle;
 };
 
 // http://www.math.com/tables/geometry/circles.htm
@@ -111,6 +134,13 @@ var divideTwo = function(n) {
 
 // Misc function
 
+/**
+ * [square description]
+ * Simple square function
+ * 
+ * @param  {float} n  Number to square
+ * @return {float}    Squared number
+ */
 var square = function(n) {
     return n * n;
 };
@@ -118,15 +148,37 @@ var square = function(n) {
 
 // Time
 
+/**
+ * [deltaTime description]
+ * @param  {int} oldTime Time previous frame in milliseconds
+ * @param  {int} newTime Time current frame in milliseconds (Date.Now(), when not provided)
+ * @return {int}         Time difference in milliseconds
+ */
 var deltaTime = function(oldTime, newTime) {
     newTime = newTime || Date.now();
     return newTime - oldTime;
 };
 
+/**
+ * [moveMultiply description]
+ * If a character should move 2 units per frame, and due to calculations the time that elapsed is bigger,
+ * the character should also move further in this frame.
+ * Character movement = 2 units per frame * moveMultiply
+ * This way the character move evenly
+ * 
+ * @param  {float} interval  time per frame in milliseconds
+ * @param  {int}   deltaTime time elapsed in milliseconds
+ * @return {float}           [description]
+ */
 var moveMultiply = function(interval, deltaTime) {
     return interval / deltaTime;
 };
 
+/**
+ * [interval description]
+ * @param  {int} fps       frames per second 
+ * @return {float} interval  time per frame in milliseconds
+ */
 var interval = function(fps) {
     return 1000 / fps;
 };
