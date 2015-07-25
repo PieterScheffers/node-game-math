@@ -188,7 +188,14 @@ exports.radiansPerDegree = radiansPerDegree;
 exports.twoPI = twoPI;
 exports.toRadians = toRadians;
 exports.toDegrees = toDegrees;
-exports.toRadians = toRadians;
+exports.angleInRange = angleInRange;
+
+exports.circleDiameter = circleDiameter;
+exports.circleRadius = circleRadius;
+exports.circleCircumference = circleCircumference;
+exports.circleArea = circleArea;
+exports.circularArcLength = circularArcLength;
+exports.circleSliceArea = circleSliceArea;
 
 exports.pythagorasHypotenuse = pythagorasHypotenuse;
 exports.pythagorasSide = pythagorasSide;
