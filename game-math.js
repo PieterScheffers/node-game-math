@@ -171,13 +171,13 @@ var deltaTime = function(oldTime, newTime) {
  * @return {float}           [description]
  */
 var moveMultiply = function(interval, deltaTime) {
-    return interval / deltaTime;
+    return deltaTime / interval;
 };
 
 /**
  * [interval description]
- * @param  {int} fps       frames per second 
- * @return {float} interval  time per frame in milliseconds
+ * @param  {int}   fps      frames per second 
+ * @return {float} interval time per frame in milliseconds
  */
 var interval = function(fps) {
     return 1000 / fps;
